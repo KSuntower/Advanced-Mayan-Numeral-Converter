@@ -1,0 +1,40 @@
+{
+  "title" : "Convertidor Avanzado de Numerales Mayas al Cuadrado",
+  "@title" : {
+    "description" : "Titulo para la aplicación",
+    "type" : "text"
+  },
+  "titleSectionOne" : "De numero a glifos",
+  "titleSectionTwo" : "De glifos a numero",
+  "classifierTitle" : "Clasificadores",
+  "classifierButton" : "Lista de Clasificadores",
+  "classifierInfoButton" : "Que son los clasificadores?",
+
+  "numberFieldHint" : "ingresa un numero",
+  "configurationTitle" : "Configuración",
+  "configurationOption0" : "Idioma",
+  "languageOption0" : "Español",
+  "languageOption1" : "Ingles",
+  "configurationOption1" : "Método de texto",
+
+  "classifier_list0" : "Para mitades o pedazos",
+  "classifier_list1" : "Para haces y manojos",
+  "classifier_list2" : "Para pedazo que haya sido quebrado de algo rígido",
+  "classifier_list3" : "Para contar las plantas",
+  "classifier_list4" : "Para contar atados",
+  "classifier_list5" : "Para algo que se transporta en la espalda",
+  "classifier_list6" : "Para contar veces que se a sucedido o se ha hecho algo",
+  "classifier_list7" : "Para la cantidad de objetos que una persona alcanza cargar entre los brazos",
+  "classifier_list8" : "Para montón, amontonamiento",
+  "classifier_list9" : "Para cosas o objetos inanimados",
+  "classifier_list10" : "Para contar azotes o campanadas",
+  "classifier_list11" : "Para contar brazadas",
+  "classifier_list12" : "Para contar veces en que se realiza una acción",
+  "classifier_list13" : "Para contar cosas sobrepuestas, estibado",
+  "classifier_list14" : "Para contar cosas largas y delgadas",
+  "classifier_list15" : "Para contar personas y animales, vivos o muertos",
+  "classifier_list16" : "Para hojas de libro o algo delgado y plano",
+  "classifier_list17" : "Para contar algo redondo",
+  "classifier_list18" : "Para contar un pedazo, fragmento o retazo arrancado",
+  "classifier_list19" : "Para contar un pedazo, fragmento o retazo cortado"
+}

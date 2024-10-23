@@ -1,0 +1,40 @@
+{
+  "title" : "Advanced Mayan Numerals Converter Squared",
+  "@title" : {
+    "description" : "Title for the application",
+    "type" : "text"
+  },
+  "titleSectionOne" : "From number to glyph",
+  "titleSectionTwo" : "From glyph to number",
+  "classifierButton" : "Classifier list",
+  "classifierTitle" : "Classifiers",
+  "classifierInfoButton" : "What are classifiers?",
+
+  "numberFieldHint" : "write a number",
+  "configurationTitle" : "Configuration",
+  "configurationOption0" : "Language",
+  "languageOption0" : "Spanish",
+  "languageOption1" : "English",
+  "configurationOption1" : "Text method",
+
+  "classifier_list0" : "To count halves or pieces",
+  "classifier_list1" : "To count handfuls",
+  "classifier_list2" : "To count pieces that have been broken out of something rigid",
+  "classifier_list3" : "To count plants",
+  "classifier_list4" : "To count bundles of tied things",
+  "classifier_list5" : "For things carried in someone's back",
+  "classifier_list6" : "To count how many times somethings has happened",
+  "classifier_list7" : "To count the amount of objects someone can carry on their arms",
+  "classifier_list8" : "For piles",
+  "classifier_list9" : "To count inert objects",
+  "classifier_list10" : "To count lashes or strokes",
+  "classifier_list11" : "To count armfuls",
+  "classifier_list12" : "To count how many times an action is done",
+  "classifier_list13" : "To count overlapping things",
+  "classifier_list14" : "To count long and slender things",
+  "classifier_list15" : "To count humans and creatures, alive or dead",
+  "classifier_list16" : "For book pages or anything slender and flat",
+  "classifier_list17" : "For round objects",
+  "classifier_list18" : "To count a torn piece, fragment or shred",
+  "classifier_list19" : "To count a cut piece, fragment or shred"
+}

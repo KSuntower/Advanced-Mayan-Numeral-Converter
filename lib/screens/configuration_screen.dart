@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:advanced_mayan_numeral_converter/generated/l10n.dart';
+import 'package:advanced_mayan_numeral_converter/helpers/calculator.dart';
 //import 'package:number_converter/helpers/classifier_list.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:intl/intl.dart';
@@ -21,6 +22,8 @@ class _ConfigurationScreenState extends State<ConfigurationScreen> {
     S.current.languageOption1
   ];
   List<String> textMethods = ["M. Zavala", "P. Romero"];
+  List<Function> textMethodsFunctions = [generateNumberWordMZ, generateNumberWordPR];
+
   Future<void> _saveLanguagePreferences(String value) async {
     final SharedPreferencesWithCache myPrefs = await widget.prefs;
     setState(() {
@@ -32,6 +35,14 @@ class _ConfigurationScreenState extends State<ConfigurationScreen> {
         S.current.languageOption1
       ];
     });
+  }
+    Future<void> _saveNamedPreference(String preference, String value) async {
+      final SharedPreferencesWithCache myPrefs = await widget.prefs;
+      setState(() {
+        myPrefs.setString(preference, value);
+        widget.onLocaleChange(Locale(value, ""));
+        // reloadClassifierList();
+      });
   }
   @override
   Widget build(BuildContext context) {
@@ -58,10 +69,12 @@ class _ConfigurationScreenState extends State<ConfigurationScreen> {
             myDropdownButton(S.of(context).configurationOption1, Icons.code,
                 List.generate(textMethods.length,
                         (index) => DropdownMenuItem(
-                      value: textMethods[index],
+                      value: index.toString(),
                       child: Text(textMethods[index]),
                     )), (String? value) {
-                  _saveLanguagePreferences(value ?? Intl.getCurrentLocale());
+                  String selectedMethod = value ?? '0';
+                  _saveNamedPreference('method', selectedMethod);
+                  generatorFunction = textMethodsFunctions[int.parse(selectedMethod)];
                 }),
           ],
         ),

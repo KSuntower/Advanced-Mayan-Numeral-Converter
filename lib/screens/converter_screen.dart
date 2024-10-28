@@ -56,10 +56,10 @@ class _ConverterScreenState extends State<ConverterScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        actions: [IconButton(onPressed: (){
-          Navigator.push(context, MaterialPageRoute(builder: (context) =>
-              ConfigurationScreen(onLocaleChange: widget.onLocaleChange, prefs: widget.prefs,)));
-        }, icon: const Icon(Icons.settings))],
+        // actions: [IconButton(onPressed: (){
+        //   Navigator.push(context, MaterialPageRoute(builder: (context) =>
+        //       ConfigurationScreen(onLocaleChange: widget.onLocaleChange, prefs: widget.prefs,)));
+        // }, icon: const Icon(Icons.settings))],
         centerTitle: true,
         title: Text(selectedTitlePage),
         automaticallyImplyLeading: false,
@@ -159,7 +159,7 @@ class _ConverterScreenState extends State<ConverterScreen> {
           setState(() {
             reverseNumberList[currentNumberIndex] = number;
             showNumberList = false;
-            finalWordNumber = generateNumberWordMZ(reverseNumberList.reversed.toList());
+            finalWordNumber = generatorFunction(reverseNumberList.reversed.toList());
             finalNumber = fromGlyphToNumber(reverseNumberList);
           });
           debugPrint(finalWordNumber);

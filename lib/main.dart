@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:advanced_mayan_numeral_converter/helpers/calculator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:advanced_mayan_numeral_converter/screens/converter_screen.dart';
@@ -53,19 +54,27 @@ class _MyAppState extends State<MyApp> {
     });
   }
 
+  Future<void> _loadNMethodPreference() async {
+    final SharedPreferencesAsync prefs = SharedPreferencesAsync();
+    List<Function> textMethodsFunctions = [generateNumberWordMZ, generateNumberWordPR];
+    String selectedMethod = (await prefs.getString('method')) ?? '0';
+    generatorFunction = textMethodsFunctions[int.parse(selectedMethod)];
+  }
+
   @override
   void initState() {
     super.initState();
-    _loadedLocale = _prefs.then((SharedPreferencesWithCache prefs) {
-      debugPrint("getting...");
-      return prefs.getString('locale') ?? Intl.getCurrentLocale();
-    });
-    _localeOverrideDelegate = SpecifiedLocalizationDelegate(Locale(_externalLoadedLocale, ""));
-    _loadLanguagePreferences();
-    _loadedLocale.then((String str) {
-      _localeOverrideDelegate = SpecifiedLocalizationDelegate(Locale(str, ""));
-      debugPrint("saved loaded: $str");
-    });
+    // _loadedLocale = _prefs.then((SharedPreferencesWithCache prefs) {
+    //   debugPrint("getting...");
+    //   return prefs.getString('locale') ?? Intl.getCurrentLocale();
+    // });
+    // _localeOverrideDelegate = SpecifiedLocalizationDelegate(Locale(_externalLoadedLocale, ""));
+    // _loadLanguagePreferences();
+    // _loadedLocale.then((String str) {
+    //   _localeOverrideDelegate = SpecifiedLocalizationDelegate(Locale(str, ""));
+    //   debugPrint("saved loaded: $str");
+    // });
+    // _loadLanguagePreferences();
   }
 
   // This widget is the root of your application.
@@ -74,9 +83,8 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       onGenerateTitle: (context) => S.of(context).title,
-      localizationsDelegates: [
-        _localeOverrideDelegate,
-        const AppLocalizationDelegate(),
+      localizationsDelegates: const [
+        AppLocalizationDelegate(),
         ...GlobalMaterialLocalizations.delegates,
         GlobalWidgetsLocalizations.delegate,
       ],

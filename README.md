@@ -1,16 +1,11 @@
-# advanced_mayan_numeral_converter
+# Advanced Mayan Numeral Converter
 
-A new Flutter project.
+A simple application for converting arabic numerals to mayan numerals.
 
-## Getting Started
+## HOW TO USE
+There are two ways that the app can be used. The first one is to input the number you wish
+to convert to Mayan numerals, and the second is to convert from Mayan numerals.
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## TODO
+- Include explanation about Mayan Numerals inside the app for newbies.
+- Include classifier list with explanation

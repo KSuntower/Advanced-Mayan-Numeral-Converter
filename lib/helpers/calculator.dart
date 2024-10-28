@@ -1,5 +1,7 @@
 import 'constants.dart';
 
+Function generatorFunction = generateNumberWordMZ;
+
 String _vowelCompare(String chr) {
   String vowels = "uó";
   if (chr.isEmpty){
